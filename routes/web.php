@@ -14,3 +14,7 @@
 Route::get('/', function () {
     return view('welcome');
 });
+Route::resource('/articulo', 'ArticuloController');
+Route::get('/ti/insertar', 'TablasIntermediasController@articuloInsertar')->name('tiInsertar');
+Route::get('/autores', 'TablasIntermediasController@articulo')->name('tiArticulo');
+Route::get('/ti/eliminar', 'TablasIntermediasController@articuloEliminar')->name('tiEliminar');
