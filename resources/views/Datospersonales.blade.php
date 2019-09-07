@@ -1,3 +1,6 @@
+<script>
+//document.getElementById("fechaNac").value = "09-02-2009";
+</script>
 @extends('../layouts/plantilla')
 @section('header')
   <div class="container">
@@ -43,8 +46,14 @@
         <div class="form-group col-md-4">
           <label for="nacimiento">País de nacimiento</label>
           <select class="custom-select" id="nacimiento" required>
-            <option selected>Selecciona una opción</option>
-            <option value="1">LLenar de la base</option>
+            @foreach( $paises as $clave => $pais )
+              @if ($datos->pais_id==($clave+1))
+                <option selected value="{{ $clave }}">{{ $pais->Pais }}</option>
+              @else
+                <option value="{{ $clave }}">{{ $pais->Pais }}</option>
+              @endif
+
+            @endforeach
           </select>
         </div>
       </div>
@@ -56,7 +65,9 @@
         </div>
         <div class="form-group col-md-6">
           <label for="fechaNac">Fecha de nacimiento</label>
-          <input type="date" class="form-control" id="fechaNac">
+          <input type="date" class="form-control" id="fechaNac" value="{{
+            preg_split('[\s]', $datos->FechaNac)[0]
+            }}">
         </div>
       </div>
 

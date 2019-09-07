@@ -10,11 +10,14 @@
 | contains the "web" middleware group. Now create something great!
 |
 */
+Route::resource('/nuevoAutor','AutorController');
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('index');
 });
 Route::resource('/articulo', 'ArticuloController');
-Route::get('/ti/insertar', 'TablasIntermediasController@articuloInsertar')->name('tiInsertar');
+Route::get('/insertarAutor', 'TablasIntermediasController@articuloInsertar')->name('tiInsertar');
 Route::get('/autores', 'TablasIntermediasController@articulo')->name('tiArticulo');
-Route::get('/ti/eliminar', 'TablasIntermediasController@articuloEliminar')->name('tiEliminar');
+Route::get('/eliminarAutor', 'TablasIntermediasController@articuloEliminar')->name('tiEliminar');
+//usuarios logeados
+Route::get('/datosGenerales', 'usuarioController@datosGenerales')->name('datos');

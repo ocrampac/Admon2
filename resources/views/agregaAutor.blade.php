@@ -3,9 +3,7 @@
 
 
 <div class="row">
-  <div class="col-md-12">
-    <div class="page-header">
-
+  <div class="col-md-8">
       <h5>Busqueda
           <form  class="form-inline pull-right" >
             @csrf
@@ -18,16 +16,25 @@
               <fieldset class="form-group">
                 <input type="text" class="form-control" name="ApellidoM" placeholder="Apellido M">
               </fieldset>
-              <fieldset class="form-group">
+              <fieldset class="form-group col-md-1">
                 <button type="submit" name="btn btn-default" >
                 <span class="glyphicon glyphicon-search"></span>
                 </button>
               </fieldset>
+
+
+
           </form>
+
       </h5>
-    </div>
+
 
   </div>
+
+  <div class="col-md-4">
+      @include('../layouts/autoresNuevo')
+  </div>
+
 </div>
 
 <table class="table table-hoover table-striped">

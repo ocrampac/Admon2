@@ -57,6 +57,7 @@ class Datopersonal extends Eloquent
 	use \Illuminate\Database\Eloquent\SoftDeletes;
 	protected $table = 'datospersonales';
 	protected $casts = [
+		'FechaNac' => 'datetime:Y-m-d',
 		'sexo_id' => 'int',
 		'estadoCivil_id' => 'int',
 		'paisOrigen_id' => 'int',
@@ -68,6 +69,7 @@ class Datopersonal extends Eloquent
 	protected $dates = [
 		'FechaNac'
 	];
+
 
 	protected $fillable = [
 		'Nombre',

@@ -22,7 +22,7 @@
 
           <div id="collapseOne" class="collapse" role="tabpanel" aria-labelledby="headingOne" style="">
             <div class="card-body">
-              <a class="dropdown-item" href="#!">Datos generales</a>
+              <a class="dropdown-item" href="{{route('datos')}}">Datos generales</a>
               <a class="dropdown-item" href="#!">Domicilio</a>
             </div>
           </div>
@@ -41,7 +41,7 @@
 
             <div id="collapse2" class="collapse" role="tabpanel" aria-labelledby="heading2" style="">
               <div class="card-body">
-                <a class="dropdown-item" href="#!">Grados académicos</a>
+                <a class="dropdown-item" href="">Grados académicos</a>
               </div>
             </div>
           </div>

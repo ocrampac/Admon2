@@ -68,7 +68,7 @@ class TablasIntermediasController extends Controller
          //$producto=Producto::findOrFail($id);
          //$producto->delete();
        return redirect('/articulo')->with('mensaje', 'Autor colocado!');
-       //return $request;
+       //return 'fdfdlkljffdklj';
 
      }
     public function articuloEliminar(Request $request)
@@ -158,5 +158,9 @@ class TablasIntermediasController extends Controller
     public function destroy(Articulo $articulo)
     {
         //
+    }
+    public function prueba()
+    {
+        return 'sfdfsdfsd';
     }
 }
